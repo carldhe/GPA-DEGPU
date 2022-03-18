@@ -1,4 +1,4 @@
-package com.example.crud;
+package com.example.gpa_degpu;
 
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.servlet.ServletProperties;
@@ -9,11 +9,11 @@ import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.servlet.ServletProperties;
 import org.springframework.stereotype.Component;
 
-import com.example.crud.personnes.ressource.PersonneResource;
+import com.example.gpa_degpu.personnes.ressource.PersonneResource;
 
 
 @Component
-@ApplicationPath("crud")
+@ApplicationPath("gpa_degpu")
 public class JerseyConfiguration extends ResourceConfig{
 	public JerseyConfiguration( ) {
 		

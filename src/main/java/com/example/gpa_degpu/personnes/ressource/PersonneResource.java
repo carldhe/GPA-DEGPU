@@ -1,8 +1,8 @@
-package com.example.crud.personnes.ressource;
+package com.example.gpa_degpu.personnes.ressource;
 
 
-import com.example.crud.personnes.process.Personne;
-import com.example.crud.personnes.process.PersonneRepository;
+import com.example.gpa_degpu.personnes.process.Personne;
+import com.example.gpa_degpu.personnes.process.PersonneRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.ws.rs.*;
@@ -25,7 +25,7 @@ public class PersonneResource {
 	public Personne createPersonne(Personne p) {
 		return personneRepository.save(p);
 	}
-	//curl -X POST http://localhost:8080/crud/personnes -H 'Content-Type: application/json' -d '{"prenom":"carl","age":22}'
+	//curl -X POST http://localhost:8080/gpa_degpu/personnes -H 'Content-Type: application/json' -d '{"prenom":"carl","age":22}'
 
 	
 

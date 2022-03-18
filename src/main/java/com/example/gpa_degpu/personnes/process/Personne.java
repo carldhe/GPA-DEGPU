@@ -1,4 +1,4 @@
-package com.example.crud.personnes.process;
+package com.example.gpa_degpu.personnes.process;
 
 
 import javax.persistence.*;

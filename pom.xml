@@ -11,9 +11,9 @@
 	</parent>
 
 	<groupId>com.example</groupId>
-	<artifactId>crud</artifactId>
+	<artifactId>gpa_degpu</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>crud</name>
+	<name>gpa_degpu</name>
 	<description></description>
 
 	<properties>

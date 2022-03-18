@@ -1,4 +1,4 @@
-package com.example.crud;
+package com.example.gpa_degpu;
 
 import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.container.ContainerResponseContext;
