@@ -1,9 +1,10 @@
-package com.example.gpa_degpu.personnes.ressource;
+package com.example.gpa_degpu.utilisateurs.ressource;
 
 
-import com.example.gpa_degpu.personnes.process.Utilisateur;
-import com.example.gpa_degpu.personnes.process.UtilisateurRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.gpa_degpu.utilisateurs.process.Utilisateur;
+import com.example.gpa_degpu.utilisateurs.process.UtilisateurRepository;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -25,7 +26,7 @@ public class UtilisateurResource {
 	public Utilisateur createUtilisateur(Utilisateur p) {
 		return utilisateurRepository.save(p);
 	}
-	//curl -X POST http://localhost:8080/gpa_degpu/utilisateurs -H 'Content-Type: application/json' -d '{"utilisateur":"carl","password":"1234"}'
+	//curl -X POST http://localhost:8080/gpa_degpu/utilisateurs -H 'Content-Type: application/json' -d '{"name":"carl","password":"1234"}'
 
 	
 
@@ -36,6 +37,8 @@ public class UtilisateurResource {
 		utilisateurRepository.findAll().forEach(utilisateurs::add);
 		return utilisateurs;
 	}
+	
+	//curl -X GET http://localhost:8080/gpa_degpu/utilisateurs -H 'Content-Type: application/json'
 
 	@PUT
 	@Path("{id}")
@@ -45,6 +48,8 @@ public class UtilisateurResource {
 		p.setId(id);
 		return utilisateurRepository.save(p);
 	}
+	
+	//curl -X PUT http://localhost:8080/gpa_degpu/utilisateurs/1 -H 'Content-Type: application/json' -d '{"name":"belzebuth","password":"jetevois"}'
 
 	@DELETE
 	@Path("{id}")
@@ -55,7 +60,8 @@ public class UtilisateurResource {
 		}
 		return Response.noContent().build();
 	}
-
+	
+	//curl -X DELETE http://localhost:8080/gpa_degpu/utilisateurs/1 -H 'Content-Type: application/json' 
 	
 
 	

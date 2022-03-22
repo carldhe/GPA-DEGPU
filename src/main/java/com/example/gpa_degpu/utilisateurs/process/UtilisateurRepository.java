@@ -1,4 +1,4 @@
-package com.example.gpa_degpu.personnes.process;
+package com.example.gpa_degpu.utilisateurs.process;
 
 import org.springframework.data.repository.CrudRepository;
 

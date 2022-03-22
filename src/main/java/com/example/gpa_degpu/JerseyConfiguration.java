@@ -4,12 +4,12 @@ import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.servlet.ServletProperties;
 import org.springframework.stereotype.Component;
 
+import com.example.gpa_degpu.utilisateurs.ressource.UtilisateurResource;
+
 import javax.ws.rs.ApplicationPath;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.servlet.ServletProperties;
 import org.springframework.stereotype.Component;
-
-import com.example.gpa_degpu.personnes.ressource.UtilisateurResource;
 
 
 @Component
