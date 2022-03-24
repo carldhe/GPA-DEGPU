@@ -23,16 +23,16 @@ public class Utilisateur  {
 		this.mot_de_passe = mot_de_passe;
 	}
 	
-	public String getName() {
+	public String getNom() {
 		return nom;
 	}
-	public void setName(String nom) {
+	public void setNom(String nom) {
 		this.nom = nom;
 	}
-	public String getPassword() {
+	public String getMot_de_passe() {
 		return mot_de_passe;
 	}
-	public void setPassword(String mot_de_passe) {
+	public void setMot_de_passe(String mot_de_passe) {
 		this.mot_de_passe = mot_de_passe;
 	}
 

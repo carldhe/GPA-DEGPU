@@ -17,6 +17,9 @@ public class LaunchApplication {
 		 * 
 		 * commande pour lancer le manager de la BDD ATTENTION il faut mettre un nom au manager sinon il n'aura aucun affichage
 		 * java -cp hsqldb.jar org.hsqldb.util.DatabaseManagerSwing
+		 *
+		 * nom de la BDD : stock_BDD
+		 * url BDD : jdbc:hsqldb:hsql://localhost/stock_BDD
 		 */
 		
 		//test1 git

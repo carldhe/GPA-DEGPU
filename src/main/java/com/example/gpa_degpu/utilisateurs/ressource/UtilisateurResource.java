@@ -26,7 +26,7 @@ public class UtilisateurResource {
 	public Utilisateur createUtilisateur(Utilisateur p) {
 		return utilisateurRepository.save(p);
 	}
-	//curl -X POST http://localhost:8080/gpa_degpu/utilisateurs -H 'Content-Type: application/json' -d '{"name":"carl","password":"1234"}'
+	//curl -X POST http://localhost:8080/gpa_degpu/utilisateurs -H 'Content-Type: application/json' -d '{"nom":"carl","mot de passe":"1234"}'
 
 	
 
