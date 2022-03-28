@@ -1,0 +1,15 @@
+@charset "UTF-8";
+body{
+	background-color:black;
+}
+
+.centre{
+	text-align:center;
+	margin:0 auto;
+	color:white;
+}
+
+.couleur {
+	color:white;
+}
+

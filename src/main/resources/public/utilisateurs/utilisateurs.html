@@ -24,21 +24,22 @@
 
 
 <body>
-<h1>Connection</h1>
+<h1>Utilisateurs</h1>
 
 <div class="form-group">
+    <label>Nouvel utilisateur :</label>
     nom : <input type="text" name="nom" id="nom">
     mot_de_passe : <input type="text" name="mot_de_passe" id="mot_de_passe">
 
     
-    <input type="button" id="connection" name="addbtn" value="Add" class="btn btn-primary btn-sm" />
+    <input type="button" id="addUtilisateur" name="addbtn" value="Add" class="btn btn-primary btn-sm" />
 </div>
 
-<p id="myJson"></p>
-
+<ul class="list-group" id="listUtilisateurs">
+</ul>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="index.js"></script>
+<script src="utilisateurs.js"></script>
 </body>
 </html>

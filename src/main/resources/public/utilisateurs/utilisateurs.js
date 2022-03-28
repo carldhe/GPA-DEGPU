@@ -45,7 +45,7 @@ $(document).ready(function() {
 	
 	/* Ajoute un élément li dans la liste de personne*/
 	function appendToListPersonne(personne) {
-	    let liToAppend = `<li id="personne-${personne.id}" class="list-group-item">${personne.nom} ${personne.mot_de_passe}`;
+	    let liToAppend = `<li id="personne-${personne.id}" class="list-group-item" >${personne.nom} ${personne.mot_de_passe}`;
 		liToAppend+= ` <button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" >X</button></li>`;
 
 		$listUtilisateurs.append(liToAppend);
