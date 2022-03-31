@@ -2,14 +2,9 @@ $(document).ready(function() {
 	let $connection = $("#connection");
 	let list;
 	
-	$.getJSON("http://localhost:8080/gpa_degpu/utilisateurs",function(resp){
-		$.each(resp,function(index){
-			
-		
-		});
-		
-    });
-   
+	
+	
+   //on récupère les utilisateurs
 $.ajax({
 		    url: "http://localhost:8080/gpa_degpu/utilisateurs",
 		    dataType: "json",
@@ -17,6 +12,7 @@ $.ajax({
 			{
 		        console.log("ça marche",data)
 				parseJSON(data)
+				//parcourir(data)
 		    },
 			error: function(err)
 			{
@@ -24,6 +20,7 @@ $.ajax({
 			}
 		});
 		
+		//la data récupérer est transformé en json puis retourner en format html
 var parseJSON = function(data)
 	{
 		$(data).each(function(i)
@@ -35,19 +32,27 @@ var parseJSON = function(data)
 	//[i]
 	var createHTML = function (element)
 	{
-		/*for (var i= 0; i < element.length;i++)
+		for (const property in element)
 		{
-			var info=$("<p>").html(element.nom)
+			var info=$("<p>").html(element[property])
 			$('#info').append(info);
 			
 		};
-		*/
 		
+		
+		
+		console.log("test",typeof element);
+		
+		//parcours l'ensemble des éléments '
+		/*
 		$.each(element,function(i){
-			var info=$("<p>").html(element[i])
+			var info=$("<p>").html(element.id +element.nom + element.mot_de_passe)
 			$('#info').append(info);
 		
 		});
+		*/
+		
+		
 	}
 
 		
@@ -57,6 +62,7 @@ var parseJSON = function(data)
 	$('#connection').click(function(){
 		let nom = $('#nom').val();
 		let mot_de_passe = $('#mot_de_passe').val();
+		
 		
 		
 		alert("connection réussi, bienvenu "+list);
