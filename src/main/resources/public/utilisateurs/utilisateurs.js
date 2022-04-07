@@ -1,10 +1,24 @@
 $(document).ready(function() {
 	let $listUtilisateurs = $("#listUtilisateurs");
-
+	let $listId ;
+	let $dropdown = $("#dropdown");
+	
+	
     $.get("http://localhost:8080/gpa_degpu/utilisateurs",function(resp){
+	
 		resp.forEach( p => appendToListPersonne(p));
+		
+		
     });
 
+	$.get("http://localhost:8080/gpa_degpu/utilisateurs",function(resp){
+		
+		resp.forEach( p =>  $dropdown.append($("<option />").val(p.id).text("id:"+p.id+" nom:"+p.nom))  );
+		
+		
+    });
+
+	
 	
 
 	$listUtilisateurs.on("click", "li button", function() {
@@ -42,6 +56,27 @@ $(document).ready(function() {
 		return false;
 	});
 
+
+$('#modifyUtilisateur').click(function(){
+		let nom = $('#nom').val();
+		let mot_de_passe = $('#mot_de_passe').val();
+		let dropdown = $("#dropdown").val();
+		console.log("dropdown "+dropdown)
+		$.ajax({
+		    type: "PUT",
+		    url: "http://localhost:8080/gpa_degpu/utilisateurs/"+dropdown,
+		    data: JSON.stringify({ "nom": nom, "mot_de_passe" : mot_de_passe }),
+		    contentType: "application/json; charset=utf-8",
+		    dataType: "json",
+		    success: function(data){
+		       console.log("great")
+		    }
+		});
+		
+		$('#nom').val('');
+		$('#mot_de_passe').val('');
+		return false;
+	});
 	
 	/* Ajoute un élément li dans la liste de personne*/
 	function appendToListPersonne(personne) {
@@ -50,7 +85,7 @@ $(document).ready(function() {
 
 		$listUtilisateurs.append(liToAppend);
 	}
-
+	
 	
 
 	

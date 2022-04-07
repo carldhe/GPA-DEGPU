@@ -49,8 +49,8 @@ public class UtilisateurResource {
 		return utilisateurRepository.save(p);
 	}
 	
-	//curl -X PUT http://localhost:8080/gpa_degpu/utilisateurs/1 -H 'Content-Type: application/json' -d '{"name":"belzebuth","password":"jetevois"}'
-
+	//curl -X PUT http://localhost:8080/gpa_degpu/utilisateurs/5 -H 'Content-Type: application/json' -d '{"nom":"belzebuth","mot_de_passe":"jetevois"}'
+	//curl -X PUT http://localhost:8080/gpa_degpu/utilisateurs/5 -H 'Content-Type: application/json' -d '{"mot_de_passe":"coucou"}'
 	@DELETE
 	@Path("{id}")
 	@Produces(MediaType.APPLICATION_JSON)
