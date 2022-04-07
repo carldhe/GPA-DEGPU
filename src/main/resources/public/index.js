@@ -1,10 +1,10 @@
 $(document).ready(function() {
 	let $connection = $("#connection");
-	let $listLien = $("#listLink");
+	let $listLien = $("#listLien");
 	
 	
 
-		
+	/*
 		//la data récupérée est transformé en json puis retourner en format html
 var parseJSON = function(data,n,p)
 	{
@@ -57,10 +57,23 @@ var tableau = function (element,n,p)
 		
 		return false
 	}
-
+	*/
 	
-	function isPresent(utilisateurs,nom){
-		return utilisateurs.map(user => {return user["nom"]== nom } );
+	
+	
+	function isPresent(utilisateurs,nom,pass){
+		i=0;
+		var tab = utilisateurs.map(user => {return user["nom"]== nom && user["mot_de_passe"]==pass } );
+		
+		for(var i in tab) {
+			if (tab[i] == true){
+				
+				return true
+			
+		}
+		}
+		
+		return false
 	}
 	
 	
@@ -76,20 +89,17 @@ var tableau = function (element,n,p)
 		    success: function(data)
 			{
 		        console.log("ça marche",data)
-				console.log("type de data",typeof data);
-				
-				//var bool = parseJSON(data,nom,mot_de_passe)
+				console.log("type de data",typeof data)
 				
 				//converti un object array en json
 				var json =JSON.stringify(data)
 				json = JSON.parse(json)
-				console.log(isPresent(json, 'carl'))
-				console.log(isPresent(json, 'faux'))
 				
-				//if (bool == true) {
-				//	console.log("bingo")
-				//	lien()
-				//}
+				console.log(isPresent(json, nom,mot_de_passe))
+				
+				if (isPresent(json, nom,mot_de_passe) == true){
+					lien();
+				}
 				
 		    },
 			error: function(err)
@@ -101,26 +111,25 @@ var tableau = function (element,n,p)
 		
 		
 		
-		$('#nom').val('');
-		$('#mot_de_passe').val('');
 		return false;
 	});
     
 
 
 	function lien() {
-	    let lien = ` <li>
-<a href="utilisateurs/utilisateurs.html">utilisateurs</a>
-<a href="ram/ram.html"></a>
-<a href="">processeur/processeur.html</a>
-<a href="">disque_dur/disque_dur.html</a>
-<a href="">carte_mere/carte_mere.html</a>
-<a href="">carte_graphique/carte_graphique.html</a>
-<a href="">alimentation/alimentation.html</a>
-</li>`;
+		console.log("lien")
+	    let lien = `
+<li><a href="utilisateurs/utilisateurs.html">utilisateurs</a></li>
+<li><a href="ram/ram.html">ram</a></li>
+<li><a href="processeur/processeur.html">processeur</a></li>
+<li><a href="disque_dur/disque_dur.html"></a></li>
+<li><a href="carte_mere/carte_mere.html"></a></li>
+<li><a href="carte_graphique/carte_graphique.html"></a></li>
+<li><a href="alimentation/alimentation.html"></a></li>
+`;
 		
 
-		$listLink.append(lien);
+		$listLien.append(lien);
 	}
     
 
