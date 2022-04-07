@@ -13,7 +13,7 @@ public class Alimentation  {
 	private String ref;
 	private String fabricant;
 	private String nom;
-	private String capacite;
+	private String puissance;
 	private int stock;
 
 	public Alimentation() {
@@ -25,7 +25,7 @@ public class Alimentation  {
 		this.ref = ref;
 		this.fabricant= fabricant;
 		this.nom= nom;
-		this.capacite= capacite;
+		this.puissance= capacite;
 	}
 
 	public String getRef() {
@@ -53,10 +53,10 @@ public class Alimentation  {
 
 
 	public String getCapacite() {
-		return capacite;
+		return puissance;
 	}
 	public void setCapacite(String capacite) {
-		this.capacite = capacite;
+		this.puissance = capacite;
 	}
 
 
