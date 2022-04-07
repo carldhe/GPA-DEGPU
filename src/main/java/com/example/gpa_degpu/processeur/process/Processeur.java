@@ -10,6 +10,7 @@ public class Processeur {
 
 	@Id
 	@GeneratedValue(strategy= GenerationType.AUTO)
+	private Long id;
 	private String ref;
 	private String fabricant;
 	private String nom;
@@ -19,23 +20,21 @@ public class Processeur {
 		super();
 	}
 	
-	public Processeur(String ref,String fabricant,String nom, int stock) {
+	public Processeur(String ref,String fabricant,String nom) {
 		super();
 		this.ref= ref;
 		this.fabricant= fabricant;
 		this.nom= nom;
-		this.stock = stock;
 	}
 	
 	public String getRef() {
 		return ref;
 	}
+
 	public void setRef(String ref) {
 		this.ref = ref;
 	}
-	
-	
-	
+
 	
 	public String getFabricant() {
 		return fabricant;
@@ -43,9 +42,7 @@ public class Processeur {
 	public void setFabricant(String fabricant) {
 		this.fabricant = fabricant;
 	}
-	
-	
-	
+
 	
 	public String getNom() {
 		return nom;
@@ -63,6 +60,9 @@ public class Processeur {
 	public void setStock(int stock) {
 		this.stock = stock;
 	}
-	
+
+	public void setId(Long id) {
+		this.id = id;
+	}
 }
 

@@ -7,21 +7,22 @@ import java.util.List;
 @Entity
 public class Ram  {
 
-	@ref
+	@Id
 	@GeneratedValue(strategy= GenerationType.AUTO)
-	@GeneratedValue()
+	private Long id;
 	private String ref;
 	private String fabricant;
 	private String nom;
 	private String capacite;
 	private int stock;
-	
+
 	public Ram() {
 		super();
 	}
-	
-	public Ram(String ref,String fabricant,String nom, String capacite, int stock) {
+
+	public Ram(String ref,String fabricant,String nom, String capacite) {
 		super();
+		this.ref = ref;
 		this.fabricant= fabricant;
 		this.nom= nom;
 		this.capacite= capacite;
@@ -64,6 +65,10 @@ public class Ram  {
 	}
 	public void setStock(int stock) {
 		this.stock = stock;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 	
 }
