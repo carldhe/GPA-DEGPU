@@ -122,10 +122,10 @@ var tableau = function (element,n,p)
 <li><a href="utilisateurs/utilisateurs.html">utilisateurs</a></li>
 <li><a href="ram/ram.html">ram</a></li>
 <li><a href="processeur/processeur.html">processeur</a></li>
-<li><a href="disque_dur/disque_dur.html"></a></li>
-<li><a href="carte_mere/carte_mere.html"></a></li>
-<li><a href="carte_graphique/carte_graphique.html"></a></li>
-<li><a href="alimentation/alimentation.html"></a></li>
+<li><a href="disque_dur/disque_dur.html">disque_dur</a></li>
+<li><a href="carte_mere/carte_mere.html">carte_mere</a></li>
+<li><a href="carte_graphique/carte_graphique.html">carte_graphique</a></li>
+<li><a href="alimentation/alimentation.html">alimentation</a></li>
 `;
 		
 
