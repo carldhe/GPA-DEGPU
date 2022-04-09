@@ -39,7 +39,7 @@ public class RamRessource {
 		return rams;
 	}
 
-<<<<<<< HEAD
+
 	/*
 	@PUT
 	@Path("{id}")
@@ -50,8 +50,6 @@ public class RamRessource {
 		return ramRepository.save(p);
 	}
 	*/
-=======
->>>>>>> 399f0bb1b7a2b19305613d6986c6b1c641345734
 
 	@PUT
 	@Path("{id}")
