@@ -27,7 +27,7 @@ public class RamRessource {
 	public Ram createRam(Ram p) {
 		return ramRepository.save(p);
 	}
-	//curl -X POST http://localhost:8080/gpa_degpu/ram -H 'Content-Type: application/json' -d '{"fabricant":"corsair","nom":"8GO-12","capacite":"8"}'
+	//curl -X POST http://localhost:8080/gpa_degpu/ram -H 'Content-Type: application/json' -d '{"fabricant":"corsair","nom":"8GO-12","capacite":"8","ref":"XB8D3D","stock":14}'
 
 	
 
@@ -41,14 +41,16 @@ public class RamRessource {
 	
 	//curl -X GET http://localhost:8080/gpa_degpu/utilisateurs -H 'Content-Type: application/json'
 
+	/*
 	@PUT
 	@Path("{id}")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public Ram updateStockRam(@PathParam("id") int stock, Ram p) {
+	public Ram updateRam(@PathParam("id") int stock, Ram p) {
 		p.setStock(stock);
 		return ramRepository.save(p);
 	}
+	*/
 
 	@PUT
 	@Path("{id}")
@@ -64,7 +66,7 @@ public class RamRessource {
 	@DELETE
 	@Path("{id}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response deleteUtilisateur(@PathParam("id") Long id) {
+	public Response deleteRam(@PathParam("id") Long id) {
 		if (ramRepository.findById(id).isPresent()) {//Attention
 			ramRepository.deleteById(id);
 		}
