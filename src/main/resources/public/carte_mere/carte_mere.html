@@ -1,10 +1,54 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
+<!doctype html>
+<html lang="fr">
 
+<!--
+<link rel="stylesheet" type="text/css" href="background.css">
+-->
+
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	
+	
+	
+    <title>intranet-GPA-DEGPU</title>
+</head>
+
+
+
+
+<body>
+<h1>Carte_mere</h1>
+
+<div class="form-group">
+    ref : <input type="text" name="ref" id="ref">
+    fabricant : <input type="text" name="fabricant" id="fabricant">
+    nom : <input type="text" name="nom" id="nom">
+	stock : <input type="text" name="stock" id="stock">
+	
+    <select name ="id" id="dropdown"></select>
+    <input type="button" id="addCarte_mere" name="addbtn" value="Add" class="btn btn-primary btn-sm" />
+    <input type="button" id="modifyCarte_mere" name="addbtn" value="Modify" class="btn btn-primary btn-sm" />
+    
+</div>
+<div class="form-group"> 
+
+
+
+
+</div>
+
+<ul class="list-group" id="listCarte_mere"></ul>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="carte_mere.js"></script>
 </body>
 </html>

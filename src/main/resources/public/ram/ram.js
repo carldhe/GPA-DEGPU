@@ -37,39 +37,42 @@ $(document).ready(function() {
 
     
     
-    $('#addUtilisateur').click(function(){
-	'{"fabricant":"corsair","nom":"8GO-12","capacite":"8"}'
-	
-	
+    $('#addRam').click(function(){
 		let fabricant = $('#fabricant').val();
 		let nom = $('#nom').val();
 		let capacite = $('#capacite').val();
+		let ref = $('#ref').val();
+		let stock = $('#stock').val();
+		
 		
 		$.ajax({
 		    type: "POST",
 		    url: "http://localhost:8080/gpa_degpu/ram",
-		    data: JSON.stringify({ "fabricant": fabricant, "nom" : nom,"capacite": capacite }),
+		    data: JSON.stringify({"fabricant":fabricant,"nom":nom,"capacite":capacite,"ref":ref,"stock":stock}),
 		    contentType: "application/json; charset=utf-8",
 		    dataType: "json",
 		    success: function(data){
-		        appendToListPersonne(data);
+		        appendToListRam(data);
 		    }
 		});
 		
 	});
 
 
-$('#modifyUtilisateur').click(function(){
+$('#modifyRam').click(function(){
 		let fabricant = $('#fabricant').val();
 		let nom = $('#nom').val();
 		let capacite = $('#capacite').val();
+		let ref = $('#ref').val();
+		let stock = $('#stock').val();
+		
 		
 		let dropdown = $("#dropdown").val();
 		console.log("dropdown "+dropdown)
 		$.ajax({
 		    type: "PUT",
 		    url: "http://localhost:8080/gpa_degpu/ram/"+dropdown,
-		    data: JSON.stringify({ "fabricant": fabricant, "nom" : nom,"capacite": capacite }),
+		    data: JSON.stringify({"fabricant":fabricant,"nom":nom,"capacite":capacite,"ref":ref,"stock":stock}),
 		    contentType: "application/json; charset=utf-8",
 		    dataType: "json",
 		    success: function(data){
@@ -79,9 +82,11 @@ $('#modifyUtilisateur').click(function(){
 		
 	});
 	
+	'{"fabricant":fabricant,"nom":nom,"capacite":capacite,"ref":ref,"stock":stock}'
+	
 	/* Ajoute un élément li dans la liste de personne*/
 	function appendToListRam(ram) {
-	    let liToAppend = `<li id="ram-${ram.id}" class="list-group-item" >${ram.fabricant} ${ram.nom} ${ram.capacite}`;
+	    let liToAppend = `<li id="ram-${ram.id}" class="list-group-item" > ref:${ram.ref} fabricant:${ram.fabricant} nom:${ram.nom} capacite:${ram.capacite} stock:${ram.stock}`;
 		liToAppend+= ` <button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" >X</button></li>`;
 
 		$listRam.append(liToAppend);

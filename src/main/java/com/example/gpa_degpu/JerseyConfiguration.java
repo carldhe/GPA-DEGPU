@@ -25,13 +25,12 @@ public class JerseyConfiguration extends ResourceConfig{
 		
 		register(UtilisateurResource.class);
 		register(RamRessource.class);
-		/*
 		register(AlimentationRessource.class);
 		register(CarteMereRessource.class);
 		register(DisqueDurRessource.class);
 		register(ProcesseurRessource.class);
 		register(CarteGraphiqueRessource.class);
-		*/
+		
 		register(CORSResponseFilter.class);
 	
 	
