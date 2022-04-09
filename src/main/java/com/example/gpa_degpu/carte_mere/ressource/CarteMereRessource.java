@@ -41,14 +41,6 @@ public class CarteMereRessource {
 
 	//curl -X GET http://localhost:8080/gpa_degpu/utilisateurs -H 'Content-Type: application/json'
 
-	@PUT
-	@Path("{id}")
-	@Consumes(MediaType.APPLICATION_JSON)
-	@Produces(MediaType.APPLICATION_JSON)
-	public Carte_mere updateStockCarte_mere(@PathParam("id") int stock, Carte_mere p) {
-		p.setStock(stock);
-		return carte_mereRepository.save(p);
-	}
 
 	@PUT
 	@Path("{id}")
@@ -61,10 +53,11 @@ public class CarteMereRessource {
 
 	//curl -X PUT http://localhost:8080/gpa_degpu/utilisateurs/1 -H 'Content-Type: application/json' -d '{"name":"belzebuth","password":"jetevois"}'
 
+
 	@DELETE
 	@Path("{id}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response deleteUtilisateur(@PathParam("id") Long id) {
+	public Response deleteCarteMere(@PathParam("id") Long id) {
 		if (carte_mereRepository.findById(id).isPresent()) {//Attention
 			carte_mereRepository.deleteById(id);
 		}

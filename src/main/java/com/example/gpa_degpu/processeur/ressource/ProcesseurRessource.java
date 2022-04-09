@@ -39,16 +39,6 @@ public class ProcesseurRessource {
 	
 	//curl -X GET http://localhost:8080/gpa_degpu/utilisateurs -H 'Content-Type: application/json'
 
-	@PUT
-	@Path("{id}")
-	@Consumes(MediaType.APPLICATION_JSON)
-	@Produces(MediaType.APPLICATION_JSON)
-	public Processeur updateStockProcesseur(@PathParam("id") int stock, Processeur p) {
-		p.setStock(stock);
-		return processeurRepository.save(p);
-	}
-	
-	//curl -X PUT http://localhost:8080/gpa_degpu/utilisateurs/1 -H 'Content-Type: application/json' -d '{"name":"belzebuth","password":"jetevois"}'
 
 	@PUT
 	@Path("{id}")
@@ -59,11 +49,13 @@ public class ProcesseurRessource {
 		return processeurRepository.save(p);
 	}
 
+	//curl -X PUT http://localhost:8080/gpa_degpu/utilisateurs/1 -H 'Content-Type: application/json' -d '{"name":"belzebuth","password":"jetevois"}'
+
 
 	@DELETE
 	@Path("{id}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response deleteUtilisateur(@PathParam("id") Long id) {
+	public Response deleteProcesseur(@PathParam("id") Long id) {
 		if (processeurRepository.findById(id).isPresent()) {
 			processeurRepository.deleteById(id);
 		}
