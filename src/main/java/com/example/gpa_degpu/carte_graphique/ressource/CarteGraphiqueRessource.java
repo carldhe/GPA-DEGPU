@@ -41,14 +41,6 @@ public class CarteGraphiqueRessource {
 
 	//curl -X GET http://localhost:8080/gpa_degpu/utilisateurs -H 'Content-Type: application/json'
 
-	@PUT
-	@Path("{id}")
-	@Consumes(MediaType.APPLICATION_JSON)
-	@Produces(MediaType.APPLICATION_JSON)
-	public Carte_graphique updateStockCarte_graphique(@PathParam("id") int stock, Carte_graphique p) {
-		p.setStock(stock);
-		return carte_graphiqueRepository.save(p);
-	}
 
 	@PUT
 	@Path("{id}")
@@ -61,10 +53,11 @@ public class CarteGraphiqueRessource {
 
 	//curl -X PUT http://localhost:8080/gpa_degpu/utilisateurs/1 -H 'Content-Type: application/json' -d '{"name":"belzebuth","password":"jetevois"}'
 
+
 	@DELETE
 	@Path("{id}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response deleteUtilisateur(@PathParam("id") Long id) {
+	public Response deleteCarteGraphique(@PathParam("id") Long id) {
 		if (carte_graphiqueRepository.findById(id).isPresent()) {//Attention
 			carte_graphiqueRepository.deleteById(id);
 		}

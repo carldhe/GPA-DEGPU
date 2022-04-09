@@ -41,14 +41,6 @@ public class AlimentationRessource {
 
 	//curl -X GET http://localhost:8080/gpa_degpu/utilisateurs -H 'Content-Type: application/json'
 
-	@PUT
-	@Path("{id}")
-	@Consumes(MediaType.APPLICATION_JSON)
-	@Produces(MediaType.APPLICATION_JSON)
-	public Alimentation updateStockAlimentation(@PathParam("id") int stock, Alimentation p) {
-		p.setStock(stock);
-		return alimentationRepository.save(p);
-	}
 
 	@PUT
 	@Path("{id}")
@@ -61,10 +53,11 @@ public class AlimentationRessource {
 
 	//curl -X PUT http://localhost:8080/gpa_degpu/utilisateurs/1 -H 'Content-Type: application/json' -d '{"name":"belzebuth","password":"jetevois"}'
 
+
 	@DELETE
 	@Path("{id}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response deleteUtilisateur(@PathParam("id") Long id) {
+	public Response deleteAlimentation(@PathParam("id") Long id) {
 		if (alimentationRepository.findById(id).isPresent()) {//Attention
 			alimentationRepository.deleteById(id);
 		}

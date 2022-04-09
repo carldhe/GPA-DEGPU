@@ -38,17 +38,7 @@ public class RamRessource {
 		ramRepository.findAll().forEach(rams::add);
 		return rams;
 	}
-	
-	//curl -X GET http://localhost:8080/gpa_degpu/utilisateurs -H 'Content-Type: application/json'
 
-	@PUT
-	@Path("{id}")
-	@Consumes(MediaType.APPLICATION_JSON)
-	@Produces(MediaType.APPLICATION_JSON)
-	public Ram updateStockRam(@PathParam("id") int stock, Ram p) {
-		p.setStock(stock);
-		return ramRepository.save(p);
-	}
 
 	@PUT
 	@Path("{id}")
@@ -64,7 +54,7 @@ public class RamRessource {
 	@DELETE
 	@Path("{id}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response deleteUtilisateur(@PathParam("id") Long id) {
+	public Response deleteRam(@PathParam("id") Long id) {
 		if (ramRepository.findById(id).isPresent()) {//Attention
 			ramRepository.deleteById(id);
 		}
