@@ -9,7 +9,7 @@ public class Disque_Dur  {
 
 	@Id
 	@GeneratedValue(strategy= GenerationType.AUTO)
-	private Long id;
+	private Long idDisque_Dur;
 	private String ref;
 	private String fabricant;
 	private String nom;
@@ -68,10 +68,10 @@ public class Disque_Dur  {
 	}
 
 	public Long getId() {
-		return id;
+		return idDisque_Dur;
 	}
 	public void setId(Long id) {
-		this.id = id;
+		this.idDisque_Dur = id;
 	}
 
 }

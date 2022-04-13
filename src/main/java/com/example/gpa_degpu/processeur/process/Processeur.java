@@ -10,7 +10,7 @@ public class Processeur {
 
 	@Id
 	@GeneratedValue(strategy= GenerationType.AUTO)
-	private Long id;
+	private Long idProcesseur;
 	private String ref;
 	private String fabricant;
 	private String nom;
@@ -62,10 +62,10 @@ public class Processeur {
 	}
 
 	public Long getId() {
-		return id;
+		return idProcesseur;
 	}
 	public void setId(Long id) {
-		this.id = id;
+		this.idProcesseur = id;
 	}
 }
 

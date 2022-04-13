@@ -5,21 +5,21 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-public class Carte_graphique  {
+public class Carte_Graphique  {
 
 	@Id
 	@GeneratedValue(strategy= GenerationType.AUTO)
-	private Long id;
+	private Long idCarte_Graphique;
 	private String ref;
 	private String fabricant;
 	private String nom;
 	private int stock;
 
-	public Carte_graphique() {
+	public Carte_Graphique() {
 		super();
 	}
 
-	public Carte_graphique(String ref,String fabricant,String nom, String capacite) {
+	public Carte_Graphique(String ref,String fabricant,String nom, String capacite) {
 		super();
 		this.ref = ref;
 		this.fabricant= fabricant;
@@ -58,11 +58,11 @@ public class Carte_graphique  {
 	}
 	
 	public Long getId() {
-		return id;
+		return idCarte_Graphique;
 	}
 
 	public void setId(Long id) {
-		this.id = id;
+		this.idCarte_Graphique = id;
 	}
 
 }

@@ -3,7 +3,7 @@ package com.example.gpa_degpu.carte_graphique.ressource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.example.gpa_degpu.carte_graphique.process.Carte_graphique;
+import com.example.gpa_degpu.carte_graphique.process.Carte_Graphique;
 import com.example.gpa_degpu.carte_graphique.process.Carte_GraphiqueRepository;
 
 import javax.ws.rs.*;
@@ -24,7 +24,7 @@ public class CarteGraphiqueRessource {
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public Carte_graphique createCarte_graphique(Carte_graphique p) {
+	public Carte_Graphique createCarte_graphique(Carte_Graphique p) {
 		return carte_graphiqueRepository.save(p);
 	}
 	//curl -X POST http://localhost:8080/gpa_degpu/carte_graphique -H 'Content-Type: application/json' -d '{"fabricant":"corsair","nom":"8GO-12","capacite":"8"}'
@@ -33,8 +33,8 @@ public class CarteGraphiqueRessource {
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public List<Carte_graphique> getAllCarte_graphique() {
-		List<Carte_graphique> carte_graphiques = new ArrayList<>();
+	public List<Carte_Graphique> getAllCarte_graphique() {
+		List<Carte_Graphique> carte_graphiques = new ArrayList<>();
 		carte_graphiqueRepository.findAll().forEach(carte_graphiques::add);
 		return carte_graphiques;
 	}
@@ -46,7 +46,7 @@ public class CarteGraphiqueRessource {
 	@Path("{id}")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public Carte_graphique updateTotalyCarte_graphique(@PathParam("id") Long id, Carte_graphique p) {
+	public Carte_Graphique updateTotalyCarte_graphique(@PathParam("id") Long id, Carte_Graphique p) {
 		p.setId(id);
 		return carte_graphiqueRepository.save(p);
 	}

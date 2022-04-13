@@ -9,7 +9,7 @@ public class Alimentation  {
 
 	@Id
 	@GeneratedValue(strategy= GenerationType.AUTO)
-	private Long id;
+	private Long idAlimentation;
 	private String ref;
 	private String fabricant;
 	private String nom;
@@ -68,11 +68,11 @@ public class Alimentation  {
 	}
 	
 	public Long getId() {
-		return id;
+		return idAlimentation;
 	}
 
 	public void setId(Long id) {
-		this.id = id;
+		this.idAlimentation = id;
 	}
 
 }

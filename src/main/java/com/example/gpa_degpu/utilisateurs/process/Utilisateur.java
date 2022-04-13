@@ -9,7 +9,7 @@ public class Utilisateur  {
 
 	@Id
 	@GeneratedValue(strategy= GenerationType.AUTO)
-	private Long id;
+	private Long idUtilisateur;
 	private String nom;
 	private String mot_de_passe;
 	
@@ -37,11 +37,11 @@ public class Utilisateur  {
 	}
 
 	public Long getId() {
-		return id;
+		return idUtilisateur;
 	}
 
 	public void setId(Long id) {
-		this.id = id;
+		this.idUtilisateur = id;
 	}
 
 	

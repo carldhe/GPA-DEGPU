@@ -4,4 +4,4 @@ package com.example.gpa_degpu.carte_mere.process;
 
 import org.springframework.data.repository.CrudRepository;
 
-public interface Carte_MereRepository extends CrudRepository<Carte_mere, Long> { }
+public interface Carte_MereRepository extends CrudRepository<Carte_Mere, Long> { }

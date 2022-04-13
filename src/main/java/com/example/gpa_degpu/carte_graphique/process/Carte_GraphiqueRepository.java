@@ -4,4 +4,4 @@ package com.example.gpa_degpu.carte_graphique.process;
 
 import org.springframework.data.repository.CrudRepository;
 
-public interface Carte_GraphiqueRepository extends CrudRepository<Carte_graphique, Long> { }
+public interface Carte_GraphiqueRepository extends CrudRepository<Carte_Graphique, Long> { }

@@ -3,7 +3,7 @@ package com.example.gpa_degpu.carte_mere.ressource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.example.gpa_degpu.carte_mere.process.Carte_mere;
+import com.example.gpa_degpu.carte_mere.process.Carte_Mere;
 import com.example.gpa_degpu.carte_mere.process.Carte_MereRepository;
 
 import javax.ws.rs.*;
@@ -24,7 +24,7 @@ public class CarteMereRessource {
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public Carte_mere createCarte_mere(Carte_mere p) {
+	public Carte_Mere createCarte_mere(Carte_Mere p) {
 		return carte_mereRepository.save(p);
 	}
 	//curl -X POST http://localhost:8080/gpa_degpu/carte_mere -H 'Content-Type: application/json' -d '{"fabricant":"corsair","nom":"8GO-12","capacite":"8"}'
@@ -33,8 +33,8 @@ public class CarteMereRessource {
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public List<Carte_mere> getAllCarte_mere() {
-		List<Carte_mere> carte_meres = new ArrayList<>();
+	public List<Carte_Mere> getAllCarte_mere() {
+		List<Carte_Mere> carte_meres = new ArrayList<>();
 		carte_mereRepository.findAll().forEach(carte_meres::add);
 		return carte_meres;
 	}
@@ -46,7 +46,7 @@ public class CarteMereRessource {
 	@Path("{id}")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public Carte_mere updateTotalyCarte_mere(@PathParam("id") Long id, Carte_mere p) {
+	public Carte_Mere updateTotalyCarte_mere(@PathParam("id") Long id, Carte_Mere p) {
 		p.setId(id);
 		return carte_mereRepository.save(p);
 	}

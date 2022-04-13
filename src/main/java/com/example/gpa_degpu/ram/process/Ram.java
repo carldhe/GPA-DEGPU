@@ -9,7 +9,7 @@ public class Ram  {
 
 	@Id
 	@GeneratedValue(strategy= GenerationType.AUTO)
-	private Long id;
+	private Long idRam;
 	private String ref;
 	private String fabricant;
 	private String nom;
@@ -68,10 +68,10 @@ public class Ram  {
 	}
 
 	public Long getId() {
-		return id;
+		return idRam;
 	}
 	public void setId(Long id) {
-		this.id = id;
+		this.idRam = id;
 	}
 	
 }
