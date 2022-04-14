@@ -40,7 +40,7 @@
       <div class="row">
         <div class="col-sm-8 col-md-7 py-4">
           <h4 class="text-white">A propos</h4>
-          <p class="text-muted">Ce site permet de gérer le stock et l'inventaire de notre magasin en ligne GpaDeGpu. Il est en liaison direct avec notre base de donnée et demande de faire attention aux informations entrées pour avoir une vue précise du stock.</p>
+          <p class="text-muted">Ce site permet de gérer le stock et l'inventaire de notre magasin en ligne GpaDeGpu.<br/>Il est en liaison direct avec notre base de donnée et demande de faire attention aux informations entrées pour avoir une vue précise du stock.</p>
         </div>
         <div class="col-sm-4 offset-md-1 py-4">
           <h4 class="text-white">Fonctions</h4>
@@ -89,7 +89,7 @@
           <div class="card shadow-sm">
             <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Image récup dans la BDD.</text></svg>
             <div class="card-body">
-              <p class="card-text">Mettre ici des infos dynamiques.</p><!-- Mettre ici un appel dynamique sur le fournisseur capacité et info du produit -->
+              <p class="card-text" id="text_dynamique">blue</p><!-- Mettre ici un appel dynamique sur le fournisseur capacité et info du produit -->
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">Détails</button>
@@ -245,9 +245,12 @@
   </div>
 </footer>
 
+<ul class="list-group" id="listInventaire"></ul>
 
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
-      
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="page_inventaire.js"></script>
+
   </body>
 </html>
