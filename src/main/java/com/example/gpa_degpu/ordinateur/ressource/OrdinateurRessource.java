@@ -32,13 +32,13 @@ public class OrdinateurRessource {
 	public Ordinateur createOrdinateur(Ordinateur p) {
 		
 		//test
-		System.out.println(p.getInfoAlimentation());
+		//System.out.println(p.getAlimentation());
 		
 		
 		return ordinateurRepository.save(p);
 	}
-	//curl -X POST http://localhost:8080/gpa_degpu/utilisateurs -H 'Content-Type: application/json' -d '{"nom":"carl","mot_de_passe":"1234"}'
-	//curl -X POST http://localhost:8080/gpa_degpu/ordinateur -H 'Content-Type: application/json' -d '{"id":34,"nom":"master","ref":"XXX","stock":8,"idAlimentation":1}'
+	
+	//curl -X POST http://localhost:8080/gpa_degpu/ordinateur -H 'Content-Type: application/json' -d '{"nom":"master","ref":"XXX","stock":8,"id":9,"idAlimentation":1}'
 
 	
 

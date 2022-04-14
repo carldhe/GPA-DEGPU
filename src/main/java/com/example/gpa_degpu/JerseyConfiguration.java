@@ -8,6 +8,7 @@ import com.example.gpa_degpu.alimentation.ressource.AlimentationRessource;
 import com.example.gpa_degpu.carte_graphique.ressource.CarteGraphiqueRessource;
 import com.example.gpa_degpu.carte_mere.ressource.CarteMereRessource;
 import com.example.gpa_degpu.disque_dur.ressource.DisqueDurRessource;
+import com.example.gpa_degpu.ordinateur.ressource.OrdinateurRessource;
 import com.example.gpa_degpu.processeur.ressource.ProcesseurRessource;
 import com.example.gpa_degpu.ram.ressource.RamRessource;
 import com.example.gpa_degpu.utilisateurs.ressource.UtilisateurResource;
@@ -30,7 +31,7 @@ public class JerseyConfiguration extends ResourceConfig{
 		register(DisqueDurRessource.class);
 		register(ProcesseurRessource.class);
 		register(CarteGraphiqueRessource.class);
-		
+		register(OrdinateurRessource.class);
 		register(CORSResponseFilter.class);
 	
 	

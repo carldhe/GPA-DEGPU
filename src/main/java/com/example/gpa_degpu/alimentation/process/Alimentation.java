@@ -15,7 +15,7 @@ public class Alimentation  {
 	private String nom;
 	private String puissance;
 	private int stock;
-
+	//curl -X POST http://localhost:8080/gpa_degpu/alimentation -H 'Content-Type: application/json' -d '{"idAlimentation":1,"ref":"XDE","fabricant":"XXX","nom":"XXX","puissance":"5","stock":8}'
 	public Alimentation() {
 		super();
 	}

@@ -27,7 +27,8 @@ public class AlimentationRessource {
 	public Alimentation createAlimentation(Alimentation p) {
 		return alimentationRepository.save(p);
 	}
-	//curl -X POST http://localhost:8080/gpa_degpu/alimentation -H 'Content-Type: application/json' -d '{"fabricant":"corsair","nom":"8GO-12","capacite":"8"}'
+	//curl -X POST http://localhost:8080/gpa_degpu/alimentation -H 'Content-Type: application/json' -d '{"ref":"XDE","fabricant":"XXX","nom":"XXX","capacite":"5","stock":8}'
+	
 
 
 

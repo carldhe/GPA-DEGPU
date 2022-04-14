@@ -18,13 +18,14 @@ public class Ordinateur {
 	    private String ref;
 	    private int stock;
 	    
+	    //https://koor.fr/Java/TutorialJEE/jee_jpa_one_to_one.wp
+	    //attention garder false pour empêcher l'ajout d'un ordinateur sans idAlimentation et true pour le permettre 
+	    
 	    @OneToOne(cascade = CascadeType.ALL)
-	    @JoinColumn(name ="idAlimentation", nullable=false)
+	    @JoinColumn(name ="idAlimentation", nullable=true)
 		private Alimentation alimentation;
 		
-		public Alimentation getInfoAlimentation() {
-			return alimentation;
-		}
+		
 		
 		
 		
@@ -64,6 +65,10 @@ public class Ordinateur {
 		}
 		public void setId(Long id) {
 			this.idOrdinateur = id;
+		}
+		
+		public Alimentation getAlimentation() {
+			return alimentation;
 		}
 	
 
