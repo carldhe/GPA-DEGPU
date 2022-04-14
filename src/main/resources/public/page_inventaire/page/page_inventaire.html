@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors + Larramendy Romain et Dhenin Carl">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Inventaire</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/album/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+  </head>
+  <body>
+    
+<header>
+  <div class="collapse bg-dark" id="navbarHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="text-white">A propos</h4>
+          <p class="text-muted">Ce site permet de gérer le stock et l'inventaire de notre magasin en ligne GpaDeGpu. Il est en liaison direct avec notre base de donnée et demande de faire attention aux informations entrées pour avoir une vue précise du stock.</p>
+        </div>
+        <div class="col-sm-4 offset-md-1 py-4">
+          <h4 class="text-white">Fonctions</h4>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Utilisateurs</a></li>
+            <li><a href="#" class="text-white">Ajouter un produit</a></li>
+            <li><a href="#" class="text-white"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a href="#" class="navbar-brand d-flex align-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="20" fill="currentColor" stroke="currentColor" class="bi bi-bookshelf" viewBox="0 0 16 16"><path d="M2.5 0a.5.5 0 0 1 .5.5V2h10V.5a.5.5 0 0 1 1 0v15a.5.5 0 0 1-1 0V15H3v.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5zM3 14h10v-3H3v3zm0-4h10V7H3v3zm0-4h10V3H3v3z"/></svg>
+        <strong>Inventaire</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">GPA DE GPU</h1>
+        <p class="lead text-muted"></p>
+        <!--<p>
+          <a href="#" class="btn btn-primary my-2">Main call to action</a>
+          <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+        </p>-->
+      </div>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Image récup dans la BDD.</text></svg>
+            <div class="card-body">
+              <p class="card-text">Mettre ici des infos dynamiques.</p><!-- Mettre ici un appel dynamique sur le fournisseur capacité et info du produit -->
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Détails</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Editer</button>
+                </div>
+                <small class="text-muted">tps depuis modif</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Image récup dans la BDD.</text></svg>
+            <div class="card-body">
+              <p class="card-text">Mettre ici des infos dynamiques.</p><!-- Mettre ici un appel dynamique sur le fournisseur capacité et info du produit -->
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Détails</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Editer</button>
+                </div>
+                <small class="text-muted">tps depuis modif</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Image récup dans la BDD.</text></svg>
+            <div class="card-body">
+              <p class="card-text">Mettre ici des infos dynamiques.</p><!-- Mettre ici un appel dynamique sur le fournisseur capacité et info du produit -->
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Détails</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Editer</button>
+                </div>
+                <small class="text-muted">tps depuis modif</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Image récup dans la BDD.</text></svg>
+            <div class="card-body">
+              <p class="card-text">Mettre ici des infos dynamiques.</p><!-- Mettre ici un appel dynamique sur le fournisseur capacité et info du produit -->
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Détails</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Editer</button>
+                </div>
+                <small class="text-muted">tps depuis modif</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Image récup dans la BDD.</text></svg>
+            <div class="card-body">
+              <p class="card-text">Mettre ici des infos dynamiques.</p><!-- Mettre ici un appel dynamique sur le fournisseur capacité et info du produit -->
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Détails</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Editer</button>
+                </div>
+                <small class="text-muted">tps depuis modif</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Image récup dans la BDD.</text></svg>
+            <div class="card-body">
+              <p class="card-text">Mettre ici des infos dynamiques.</p><!-- Mettre ici un appel dynamique sur le fournisseur capacité et info du produit -->
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Détails</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Editer</button>
+                </div>
+                <small class="text-muted">tps depuis modif</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Image récup dans la BDD.</text></svg>
+            <div class="card-body">
+              <p class="card-text">Mettre ici des infos dynamiques.</p><!-- Mettre ici un appel dynamique sur le fournisseur capacité et info du produit -->
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Détails</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Editer</button>
+                </div>
+                <small class="text-muted">tps depuis modif</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Image récup dans la BDD.</text></svg>
+            <div class="card-body">
+              <p class="card-text">Mettre ici des infos dynamiques.</p><!-- Mettre ici un appel dynamique sur le fournisseur capacité et info du produit -->
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Détails</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Editer</button>
+                </div>
+                <small class="text-muted">tps depuis modif</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Image récup dans la BDD.</text></svg>
+            <div class="card-body">
+              <p class="card-text">Mettre ici des infos dynamiques.</p><!-- Mettre ici un appel dynamique sur le fournisseur capacité et info du produit -->
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Détails</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Editer</button>
+                </div>
+                <small class="text-muted">15min</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="text-muted py-5">
+  <div class="container">
+    <p class="float-end mb-1">
+      <a href="#">Revenir en haut</a>
+    </p>
+    <p class="mb-1">Page d'inventaire et de stocks &copy; GpaDeGPU, entreprise de vente de matériels informatiques française!</p>
+    <p class="mb-0">Nouvel utilisateur ? <a href="/">Créer un compte</a> ou vous pouvez <a href="../getting-started/introduction/">récupérer votre mot de passe</a>.</p>
+  </div>
+</footer>
+
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+      
+  </body>
+</html>
