@@ -32,15 +32,13 @@ public class OrdinateurRessource {
 	public Ordinateur createOrdinateur(Ordinateur p) {
 		
 		//test
-		//System.out.println(p.getAlimentation());
+		System.out.println(p.getAlimentation());
 		
 		
 		return ordinateurRepository.save(p);
 	}
 	
-	//curl -X POST http://localhost:8080/gpa_degpu/ordinateur -H 'Content-Type: application/json' -d '{"nom":"master","ref":"XXX","stock":8,"id":9,"idAlimentation":1}'
-
-	
+	//curl -X POST http://localhost:8080/gpa_degpu/ordinateur -H 'Content-Type: application/json' -d '{"nom":"master","ref":"XXX","stock":8,"id":9,"alimentation":{},"carte_Graphique":{},"carte_Mere":{},"disque_Dur":{},"processeur":{},"ram":{}}'
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)

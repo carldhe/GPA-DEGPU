@@ -2,10 +2,12 @@ package com.example.gpa_degpu.alimentation.process;
 
 
 import javax.persistence.*;
+
+import java.io.Serializable;
 import java.util.List;
 
 @Entity
-public class Alimentation  {
+public class Alimentation implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy= GenerationType.AUTO)
@@ -22,10 +24,12 @@ public class Alimentation  {
 
 	public Alimentation(String ref,String fabricant,String nom, String capacite) {
 		super();
+		
 		this.ref = ref;
 		this.fabricant= fabricant;
 		this.nom= nom;
 		this.puissance= capacite;
+		
 	}
 
 	public String getRef() {

@@ -9,7 +9,7 @@ public class Carte_Mere  {
 
 	@Id
 	@GeneratedValue(strategy= GenerationType.AUTO)
-	private Long idCarte_mere;
+	private Long idCarte_Mere;
 	private String ref;
 	private String fabricant;
 	private String nom;
@@ -58,11 +58,11 @@ public class Carte_Mere  {
 	}
 	
 	public Long getId() {
-		return idCarte_mere;
+		return idCarte_Mere;
 	}
 
 	public void setId(Long id) {
-		this.idCarte_mere = id;
+		this.idCarte_Mere = id;
 	}
 
 }
