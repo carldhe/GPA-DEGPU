@@ -120,6 +120,7 @@ var tableau = function (element,n,p)
 		console.log("lien")
 	    let lien = `
 <li><a href="utilisateurs/utilisateurs.html">utilisateurs</a></li>
+<li><a href="ordinateur/ordinateur.html">ordinateur</a></li>
 <li><a href="ram/ram.html">ram</a></li>
 <li><a href="processeur/processeur.html">processeur</a></li>
 <li><a href="disque_dur/disque_dur.html">disque_dur</a></li>

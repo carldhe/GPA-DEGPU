@@ -31,10 +31,6 @@ public class OrdinateurRessource {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Ordinateur createOrdinateur(Ordinateur p) {
 		
-		//test
-		System.out.println(p.getAlimentation());
-		
-		
 		return ordinateurRepository.save(p);
 	}
 	
@@ -63,7 +59,7 @@ public class OrdinateurRessource {
 		return ordinateurRepository.save(p);
 	}
 
-	//curl -X PUT http://localhost:8080/gpa_degpu/utilisateurs/1 -H 'Content-Type: application/json' -d '{"name":"belzebuth","password":"jetevois"}'
+	//curl -X PUT http://localhost:8080/gpa_degpu/ordinateur/7 -H 'Content-Type: application/json' -d '{"ram":6}'
 
 
 	@DELETE

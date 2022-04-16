@@ -23,10 +23,16 @@ public class Ordinateur implements Serializable{
 	    private String nom;
 	    private String ref;
 	    private int stock;
+	    private Long idAlimentation;
+	    private Long idCarte_Graphique;
+	    private Long idCarte_Mere;
+	    private Long idDisque_Dur;
+	    private Long idProcesseur;
+	    private Long idRam;
 	    
 	    //https://koor.fr/Java/TutorialJEE/jee_jpa_one_to_one.wp
 	    //attention garder false pour empêcher l'ajout d'un ordinateur sans idAlimentation et true pour le permettre 
-	    
+	    /*
 	    @OneToOne(cascade = CascadeType.ALL) 
 	    @JoinColumn(name = "idAlimentation", nullable=true)
 		private Alimentation alimentation;
@@ -51,7 +57,7 @@ public class Ordinateur implements Serializable{
 	    @OneToOne(cascade = CascadeType.ALL) 
 	    @JoinColumn(name = "idRam", nullable=true)
 		private Ram ram;
-		
+		*/
 	    public String getRef() {
 			return ref;
 		}
@@ -86,6 +92,56 @@ public class Ordinateur implements Serializable{
 			this.idOrdinateur = id;
 		}
 		
+		public Long getidAlimentation() {
+			return idAlimentation;
+		}
+		public void setidAlimentation(Long idAlimentation) {
+			this.idAlimentation = idAlimentation;
+		}
+		
+		public Long getidCarte_Graphique() {
+			return idCarte_Graphique;
+		}
+		public void setidCarte_Graphique(Long idCarte_Graphique) {
+			this.idCarte_Graphique = idCarte_Graphique;
+		}
+		
+		public Long getidCarte_Mere() {
+			return idCarte_Mere;
+		}
+		public void setidCarte_Mere(Long idCarte_Mere) {
+			this.idCarte_Mere = idCarte_Mere;
+		}
+		
+		public Long getidDisque_Dur() {
+			return idDisque_Dur;
+		}
+		public void setidDisque_Dur(Long idDisque_Dur) {
+			this.idDisque_Dur = idDisque_Dur;
+		}
+		
+		public Long getidProcesseur() {
+			return idProcesseur;
+		}
+		public void setidProcesseur(Long idProcesseur) {
+			this.idProcesseur = idProcesseur;
+		}
+		
+		public Long getidRam() {
+			return idRam;
+		}
+		public void setidRam(Long idRam) {
+			this.idRam = idRam;
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		/*
 		public Alimentation getAlimentation() {
 			return alimentation;
 		}
@@ -134,4 +190,6 @@ public class Ordinateur implements Serializable{
 		public void setRam(Ram ram) {
 			this.ram = ram;
 		}
+		
+		*/
 }
