@@ -2,7 +2,23 @@ $(document).ready(function() {
 	let $connection = $("#connection");
 	let $listLien = $("#listLien");
 	
-	
+	$('#addUser').click(function(){
+		let nom = $('#nom').val();
+		let mot_de_passe = $('#mot_de_passe').val();
+		
+		
+		$.ajax({
+		    type: "POST",
+		    url: "http://localhost:8080/gpa_degpu/utilisateurs",
+		    data: JSON.stringify({"nom":nom,"mot_de_passe":mot_de_passe}),
+		    contentType: "application/json; charset=utf-8",
+		    dataType: "json",
+		    success: function(data){
+		        alert("User created")
+		    }
+		});
+		
+	});
 
 	/*
 		//la data récupérée est transformé en json puis retourner en format html
